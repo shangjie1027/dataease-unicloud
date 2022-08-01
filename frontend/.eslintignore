@@ -1,0 +1,9 @@
+/build/
+/config/
+/dist/
+/release/
+/mock/
+vue.config.js
+postcss.config.js
+eslint.check.js
+*.min.js

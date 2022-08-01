@@ -1,0 +1,6 @@
+#!/bin/bash
+mkdir -p ${ANSIBLE_PATH}/${JOB_NAME}/${BUILD_VERSION}/
+cp ${JOB_NAME}-${BUILD_VERSION}.tar.gz ${ANSIBLE_PATH}/${JOB_NAME}/${BUILD_VERSION}/${JOB_NAME}.tar.gz
+cp ansible.yaml ${ANSIBLE_PATH}/${JOB_NAME}/${BUILD_VERSION}/${JOB_NAME}.yaml
+cd  ${ANSIBLE_PATH}/${JOB_NAME}/${BUILD_VERSION}/ &&  ansible-playbook  ${JOB_NAME}.yaml
+cd

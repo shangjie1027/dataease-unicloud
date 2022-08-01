@@ -1,0 +1,5 @@
+{
+    "name": "bide",
+    "main": "singleSpaEntry.js",
+    "base": false
+}

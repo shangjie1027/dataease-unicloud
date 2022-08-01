@@ -1,0 +1,13 @@
+- hosts: controller
+  tasks:
+    - name: copy ${JOB_NAME}.tar.gz
+      copy: 'src=${ANSIBLE_PATH}/${JOB_NAME}/${BUILD_VERSION}/${JOB_NAME}.tar.gz dest=/tmp/${JOB_NAME}-${BUILD_VERSION}.tar.gz mode=0644'
+    - name: init every node
+      shell: '{{ item }}'
+      with_items:
+      - rm -rf ${DIR_PATH}
+      - mkdir -p  ${DIR_PATH}
+      - tar -zxvf  /tmp/${JOB_NAME}-${BUILD_VERSION}.tar.gz  -C ${DIR_PATH}/../
+      - cd ${DIR_PATH}/../ && bash combine.sh
+      - rm -rf /tmp/${JOB_NAME}-${BUILD_VERSION}.tar.gz
+      - ls -l ${DIR_PATH}

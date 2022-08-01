@@ -1,0 +1,122 @@
+
+ .el-message-box {
+    padding-bottom: 0;
+    border-radius: 2px;
+    min-width: 450px;
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    &__message {
+      text-align: justify;
+      p {
+        color: #252931;
+      }
+    }
+    &__status {
+      font-family: iconfont20!important;
+      font-size: 18px!important;
+      position: relative;
+      top: auto;
+      transform: none;
+      vertical-align: middle;
+      margin-top: 3px;
+      &:before {
+        padding-left: 0;
+      }
+    }
+    &__status + &__message {
+      padding-left: 6px;
+      padding-right: 0;
+    }
+    &__header {
+      padding: 24px 32px;
+    }
+    &__headerbtn {
+      top: 22px;
+      right: 28px;
+      > .el-message-box__close {
+        font-size: 20px;
+        &:hover {
+          color: #4875F6;
+        }
+      }
+    }
+    &__content {
+      padding: 0 32px;
+      margin-bottom: 8px;
+      text-align: left;
+      line-height: 20px;
+    }
+  }
+  .el-message-box__btns {
+    padding: 24px 0;
+    text-align: center;
+    button:nth-child(2) {
+      margin-left: 12px;
+    }
+    
+    
+   
+  }
+ 
+  .v-modal {
+    opacity: 0.3;
+  }
+  
+  .el-message-box__btns {
+    padding: 24px 0;
+    text-align: center;
+    button:nth-child(2) {
+      margin-left: 12px;
+    }
+    .el-button--default {
+      color: #333333;
+      &:hover {
+        color: #66b1ff;
+        background-color: #ecf5ff;
+        border-color: #66b1ff;
+      }
+      &:active {
+        color: #66b1ff;
+        background-color: #ecf5ff;
+        border-color: #66b1ff;
+      }
+    }
+    
+    .el-button--primary {
+      color: #ffffff;
+      background-color: #409eff;
+      border-color: #409eff;
+      &:hover {
+        color: #ffffff;
+        background-color: #66b1ff;
+        border-color: #66b1ff;
+      }
+      &:active {
+        color: #ffffff;
+        background-color: #66b1ff;
+        border-color: #66b1ff;
+      }
+    }
+  }
+
+.el-icon-warning:before {
+    font-family: element-icons!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\E7A3";
+  }
